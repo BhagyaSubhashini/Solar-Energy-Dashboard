@@ -1,10 +1,13 @@
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation/Navigation";
+import HeroSection from "./components/HeroSection/HeroSection";
 
 function App() {
   return (
     <>
       <Navigation/>
-      {/*<main></main>*/}
+      <main>
+        <HeroSection/>
+      </main>
     </>
   );
 
