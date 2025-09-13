@@ -18,7 +18,7 @@ const Navigation = () => {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-wind-icon lucide-wind logo block"
+            className="lucide lucide-wind-icon lucide-wind logo block"
           >
             <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
             <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />

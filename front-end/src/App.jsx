@@ -1,6 +1,7 @@
 import Navigation from "./components/Navigation/Navigation";
 import HeroSection from "./components/HeroSection/HeroSection";
 import { Button } from "./components/ui/button";
+import SolarEnergyProduction from "./components/SolarEnergyDashboard";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Navigation/>
       <main>
         <HeroSection/>
-        <button>Click me</button>
+        <SolarEnergyProduction/>
       </main>
     </>
   );
