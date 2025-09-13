@@ -3,13 +3,13 @@ import EnergyProductionCard from "./EnergyProductionCard";
 const SolarEnergyProduction = () => {
 
   const energyProductiondata = [
-    {day: "Mon", date: "Sep 7", production: 18.2},
-    {day: "Tue", date: "Sep 8", production: 44.8},
-    {day: "Wed", date: "Sep 9", production: 39.9},
-    {day: "Thu", date: "Sep 10", production: 36.7},
-    {day: "Fri", date: "Sep 11", production: 26.7},
-    {day: "Sat", date: "Sep 12", production: 16},
-    {day: "Sun", date: "Sep 13", production: 23.6},
+    {day: "Mon", date: "Sep 7", production: 18.2, hasAnomaly: false},
+    {day: "Tue", date: "Sep 8", production: 44.8, hasAnomaly: true},
+    {day: "Wed", date: "Sep 9", production: 39.9, hasAnomaly: false},
+    {day: "Thu", date: "Sep 10", production: 36.7, hasAnomaly: false},
+    {day: "Fri", date: "Sep 11", production: 26.7, hasAnomaly: false},
+    {day: "Sat", date: "Sep 12", production: 16, hasAnomaly: false},
+    {day: "Sun", date: "Sep 13", production: 23.6, hasAnomaly: false},
   ];
 
   return (
@@ -26,10 +26,11 @@ const SolarEnergyProduction = () => {
               key={el.date}
               day={el.day}
               date={el.date}
-              production={el.production} />
+              production={el.production} 
+              hasAnomaly={el.hasAnomaly}/>
           );
         })}
-        
+
       </div>
     </section>
   )
