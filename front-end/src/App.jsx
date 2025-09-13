@@ -1,5 +1,6 @@
 import Navigation from "./components/Navigation/Navigation";
 import HeroSection from "./components/HeroSection/HeroSection";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Navigation/>
       <main>
         <HeroSection/>
+        <button>Click me</button>
       </main>
     </>
   );
