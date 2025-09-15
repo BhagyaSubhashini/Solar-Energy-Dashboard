@@ -4,7 +4,7 @@ const SolarEnergyProduction = () => {
 
   const energyProductiondata = [
     {day: "Mon", date: "Sep 7", production: 18.2, hasAnomaly: false},
-    {day: "Tue", date: "Sep 8", production: 44.8, hasAnomaly: true},
+    {day: "Tue", date: "Sep 8", production: 1.8, hasAnomaly: true},
     {day: "Wed", date: "Sep 9", production: 39.9, hasAnomaly: false},
     {day: "Thu", date: "Sep 10", production: 36.7, hasAnomaly: false},
     {day: "Fri", date: "Sep 11", production: 26.7, hasAnomaly: false},
