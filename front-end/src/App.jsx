@@ -1,7 +1,7 @@
 import Navigation from "./components/Navigation/Navigation";
 import HeroSection from "./components/HeroSection/HeroSection";
 import { Button } from "./components/ui/button";
-import SolarEnergyProduction from "./components/SolarEnergyDashboard";
+import SolarEnergyProduction from "./components/SolarEnergyProduction";
 
 function App() {
   return (
