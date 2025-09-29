@@ -1,15 +1,20 @@
 import "dotenv/config";
 import express from "express";
-import solarUnitRouter from "./api/solar-unit";
 import energyGenerationRecordRouter from "./api/energy-generation-record";
-
+import { globalErrorHandler } from "./api/middlewares/global-error-handling-middleware";
+import { loggerMiddleware } from "./api/middlewares/logger-middleware";
+import solarUnitRouter from "./api/solar-unit";
 import { connectDB } from "./infrastructure/db";
 
 const server = express();
 server.use(express.json());
 
+server.use(loggerMiddleware);
+
 server.use("/api/solar-units", solarUnitRouter);
 server.use("/api/energy-generation-records", energyGenerationRecordRouter);
+
+server.use(globalErrorHandler);
 
 connectDB();
 
@@ -17,10 +22,3 @@ const PORT = 8002;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-/* Identify the resources
-Solar Unit
-Energy Generation Record
-User
-House
-*/

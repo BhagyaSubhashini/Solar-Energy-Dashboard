@@ -22,4 +22,7 @@ const energyGenerationRecordSchema = new mongoose.Schema({
   },
 });
 
-export const EnergyGenerationRecord = mongoose.model("EnergyGenerationRecord", energyGenerationRecordSchema);
+export const EnergyGenerationRecord = mongoose.model(
+  "EnergyGenerationRecord",
+  energyGenerationRecordSchema
+);
