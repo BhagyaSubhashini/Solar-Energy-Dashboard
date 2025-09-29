@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { SolarUnit } from "./entities/SolarUnit";
 import { EnergyGenerationRecord } from "./entities/EnergyGenerationRecord";
-//import { User } from "./entities/User";
+import { User } from "./entities/User";
 import dotenv from "dotenv";
 import { connectDB } from "./db";
 
@@ -15,17 +15,17 @@ async function seed() {
     // Clear existing data
     await EnergyGenerationRecord.deleteMany({});
     await SolarUnit.deleteMany({});
-    //await User.deleteMany({});
+    await User.deleteMany({});
 
     // Create a new user
-    /*const user = await User.create({
+    const user = await User.create({
       name: "Alice Example",
       email: "alice@example.com",
-    });*/
+    });
 
     // Create a new solar unit linked to the user
     const solarUnit = await SolarUnit.create({
-      //userId: user._id,
+      userId: user._id,
       serialNumber: "SU-0001",
       installationDate: new Date("2025-09-21"),
       capacity: 5000,
